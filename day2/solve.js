@@ -9,7 +9,7 @@ function run(noun, verb) {
 		if (parseInt(sysmem[i]) == 99) {
 			return(sysmem);
 		} else {
-			out = operate({opcode:sysmem[i], in1:sysmem[i+1], in2:sysmem[i+2], stor:sysmem[i+3]});
+			operate({opcode:sysmem[i], in1:sysmem[i+1], in2:sysmem[i+2], stor:sysmem[i+3]});
 		}
 	}
 }
