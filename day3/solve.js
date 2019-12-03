@@ -59,13 +59,10 @@ function findLowestManhattenDistance(origin) {
 	}
 	return smallest
 }
-function calculatePart2() {
-	mapWire(input.split('\n')[0], 1, collisions)
-	mapWire(input.split('\n')[1], 2, collisions)
-	console.log("Part2: " + minTravelDist);
-}
 
 mapWire(input.split('\n')[0], 1)
 mapWire(input.split('\n')[1], 2)
 console.log("Part1: " + findLowestManhattenDistance({x:100000,y:100000}));
-calculatePart2();
+mapWire(input.split('\n')[0], 1, collisions)
+mapWire(input.split('\n')[1], 2, collisions)
+console.log("Part2: " + minTravelDist);
