@@ -26,7 +26,7 @@ function operate(data) {
 }
 function run() {
 	for (i = 0; i < sysmem.length; i=i) {
-		var testop = (sysmem[i] > 2) ? parseInt(sysmem[i].toString().substr(sysmem[i].toString().length-1,1)) : i
+		var testop = (sysmem[i] > 2) ? parseInt(sysmem[i].toString().substr(sysmem[i].toString().length-1,1)) : sysmem[i]
 		if (parseInt(testop) == 99) {
 			return(sysmem);
 		} else if (parseInt(testop) == 3 || parseInt(testop) == 4) {
@@ -36,7 +36,7 @@ function run() {
 			operate({opcode:sysmem[i], in1:sysmem[i+1], in2:sysmem[i+2]});
 		} else {
 			operate({opcode:sysmem[i], in1:sysmem[i+1], in2:sysmem[i+2], stor:sysmem[i+3]});
-			i=i+4
+			i += 4;
 		}
 	}
 }
